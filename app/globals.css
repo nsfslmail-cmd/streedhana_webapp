@@ -1,19 +1,16 @@
 @import "tailwindcss";
 
 :root {
-<<<<<<<<< Temporary merge branch 1
   --background: #ffffff;
   --foreground: #171717;
   --background: 30 50% 98%;
     --foreground: 200 30% 15%;
 
     --card: 0 0% 100%;
-=========
   --background: 30 50% 98%;
   --foreground: 200 30% 15%;
 
      --card: 0 0% 100%;
->>>>>>>>> Temporary merge branch 2
     --card-foreground: 200 30% 15%;
 
     --popover: 0 0% 100%;
@@ -72,7 +69,6 @@
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
-<<<<<<<<< Temporary merge branch 1
 }
 
 
@@ -116,8 +112,6 @@
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
-=========
->>>>>>>>> Temporary merge branch 2
 }
 
 .bg-primary {
@@ -250,4 +244,3 @@ html {
 .read-the-docs {
   color: #888;
 }
->>>>>>>>> Temporary merge branch 2

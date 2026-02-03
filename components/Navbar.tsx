@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
+import Link from "next/link";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -29,12 +30,19 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
-            <a href="/products" className="text-foreground/80 hover:text-primary transition-colors font-medium">
+            <Link
+              href="/products"
+              onClick={() => setIsOpen(false)}
+              className="text-foreground/80 hover:text-primary transition-colors font-medium"
+            >
               Products
-            </a>
-            <a href="/mutual-fund-sakhi-ginnie" className="text-foreground/80 hover:text-primary transition-colors font-medium">
+            </Link>
+            <Link 
+              href="/ginnie"
+              onClick={() => setIsOpen(false)}
+              className="text-foreground/80 hover:text-primary transition-colors font-medium">
               Mutual Fund Sakhi/Ginnie
-            </a>
+            </Link>
             <DropdownMenu>
               <DropdownMenuTrigger className="flex items-center gap-1 text-foreground/80 hover:text-primary transition-colors font-medium">
                 Tools <ChevronDown className="w-4 h-4" />
