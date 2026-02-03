@@ -64,7 +64,7 @@ const Navbar = () => {
               </DropdownMenuContent>
             </DropdownMenu>
             <a href="/#faq" className="text-foreground/80 hover:text-primary transition-colors font-medium">
-              Your Questions, Answered
+              FAQ
             </a>
             <a href="#about" className="text-foreground/80 hover:text-primary transition-colors font-medium">
               About Us
@@ -114,7 +114,7 @@ const Navbar = () => {
                 ))}
               </div>
               <a href="/#faq" className="px-2 py-2 text-foreground/80 hover:text-primary transition-colors">
-                Your Questions, Answered
+                FAQ
               </a>
               <a href="#about" className="px-2 py-2 text-foreground/80 hover:text-primary transition-colors">
                 About Us

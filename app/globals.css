@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* --background: #ffffff;
+  --foreground: #171717; */
   --background: 30 50% 98%;
     --foreground: 200 30% 15%;
 
     --card: 0 0% 100%;
-  --background: 30 50% 98%;
-  --foreground: 200 30% 15%;
+    --background: 30 50% 98%;
+    --foreground: 200 30% 15%;
 
-     --card: 0 0% 100%;
+    --card: 0 0% 100%;
     --card-foreground: 200 30% 15%;
 
     --popover: 0 0% 100%;
@@ -168,7 +168,7 @@ body {
 
 
 .animate-scroll-right {
-  animation: scroll-right 30s linear infinite;
+  animation: scroll-right 20s linear infinite;
 }
 
 .animate-scroll-left {

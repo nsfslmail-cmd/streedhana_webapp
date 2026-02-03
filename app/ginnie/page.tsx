@@ -142,11 +142,19 @@ const MutualFundSakhiGinnie = () => {
         <div className="container mx-auto px-4">
           <Tabs defaultValue="sakhi" className="w-full">
             <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-10">
-              <TabsTrigger value="sakhi" className="text-sm md:text-base">
+              <TabsTrigger value="sakhi" className="text-sm md:text-base
+                data-[state=active]:bg-white
+                data-[state=active]:text-foreground
+                data-[state=active]:shadow-sm
+                rounded-md">
                 <Heart className="w-4 h-4 mr-2" />
                 Become a Sakhi
               </TabsTrigger>
-              <TabsTrigger value="ginnie" className="text-sm md:text-base">
+              <TabsTrigger value="ginnie" className="text-sm md:text-base
+                data-[state=active]:bg-white
+                data-[state=active]:text-foreground
+                data-[state=active]:shadow-sm
+                rounded-md">
                 <Sparkles className="w-4 h-4 mr-2" />
                 Become a Ginnie
               </TabsTrigger>
@@ -163,11 +171,11 @@ const MutualFundSakhiGinnie = () => {
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 ">
                 {/* Who Can Become */}
                 <Card>
                   <CardHeader>
-                    <CardTitle className="flex items-center gap-2 text-lg">
+                    <CardTitle className="flex items-center gap-2 text-lg ">
                       <Users className="w-5 h-5 text-primary" />
                       Who Can Become a Sakhi?
                     </CardTitle>

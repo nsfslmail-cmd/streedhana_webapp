@@ -1,5 +1,6 @@
 import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -8,12 +9,21 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <h3 className="text-3xl font-display font-bold text-white mb-4">
+            {/* <h3 className="text-3xl font-display font-bold text-white mb-4">
               StreeDhana
             </h3>
             <p className="text-white/70 mb-6 max-w-md">
               Smart Mutual Fund For Big Dreams
-            </p>
+            </p> */}
+            <a href="/" className="flex items-center gap-2">
+              <Image
+                src="/logo.png"      
+                alt="StreeDhana Logo"
+                width={200}
+                height={180}
+                className="rounded-full" 
+              />
+            </a>
             
             <div className="flex gap-4 mb-8">
               <a

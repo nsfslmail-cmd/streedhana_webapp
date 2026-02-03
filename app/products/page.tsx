@@ -142,11 +142,19 @@ const Products = () => {
         <div className="container mx-auto px-4">
           <Tabs defaultValue="portfolios" className="w-full">
             <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-10">
-              <TabsTrigger value="portfolios" className="text-sm md:text-base">
+              <TabsTrigger value="portfolios" className="text-sm md:text-base
+                data-[state=active]:bg-white
+                data-[state=active]:text-foreground
+                data-[state=active]:shadow-sm
+                rounded-md">
                 <Wallet className="w-4 h-4 mr-2" />
                 MF Portfolios
               </TabsTrigger>
-              <TabsTrigger value="goals" className="text-sm md:text-base">
+              <TabsTrigger value="goals" className="text-sm md:text-base
+                data-[state=active]:bg-white
+                data-[state=active]:text-foreground
+                data-[state=active]:shadow-sm
+                rounded-md">
                 <TrendingUp className="w-4 h-4 mr-2" />
                 Goal Based
               </TabsTrigger>
@@ -186,9 +194,9 @@ const Products = () => {
                           <p className="text-xs text-muted-foreground">CAGR</p>
                           <p className="text-xl font-bold text-accent">{portfolio.cagr}</p>
                         </div>
-                        <Button size="sm" variant="ghost" className="group-hover:bg-primary group-hover:text-primary-foreground">
+                        {/* <Button size="sm" variant="ghost" className="group-hover:bg-primary group-hover:text-primary-foreground">
                           Invest <ArrowRight className="w-4 h-4 ml-1" />
-                        </Button>
+                        </Button> */}
                       </div>
                     </CardContent>
                   </Card>
@@ -223,7 +231,7 @@ const Products = () => {
                       <CardContent className="p-5 md:p-6">
                         <div className="flex items-start gap-4">
                           <div className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 ${
-                            plan.recommended ? "bg-primary text-primary-foreground" : "bg-secondary"
+                            plan.recommended ? "bg-primary text-primary-foreground" : "bg-primary text-primary-foreground"
                           }`}>
                             <IconComponent className="w-6 h-6" />
                           </div>
