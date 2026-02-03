@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import {
   DropdownMenu,
@@ -23,9 +24,16 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <a href="/" className="flex items-center gap-2">
-            <span className="text-2xl md:text-3xl font-display font-bold text-primary">
+            <Image
+              src="/logo.png"      
+              alt="StreeDhana Logo"
+              width={200}
+              height={180}
+              className="rounded-full" 
+            />
+            {/* <span className="text-2xl md:text-3xl font-display font-bold text-primary">
               StreeDhana
-            </span>
+            </span> */}
           </a>
 
           {/* Desktop Navigation */}

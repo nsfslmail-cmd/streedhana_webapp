@@ -17,11 +17,11 @@
     --popover-foreground: 200 30% 15%;
 
     /* Primary - Warm Coral Pink */
-    --primary: 10 70% 60%;
+    --primary: 195 59% 40%;
     --primary-foreground: 0 0% 100%;
 
     /* Secondary - Soft Teal */
-    --secondary: 175 40% 45%;
+    --secondary: 200 50% 25%;
     --secondary-foreground: 0 0% 100%;
 
     /* Muted - Warm neutral */
@@ -84,7 +84,7 @@
     --popover: 210 40% 12%;
     --popover-foreground: 30 20% 95%;
 
-    --primary: 10 70% 60%;
+    --primary: 195 59% 40%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 175 40% 35%;
@@ -115,7 +115,7 @@
 }
 
 .bg-primary {
-  background-color: 10 70% 60%;
+  background-color: hsl(var(--primary));
 }
 
 @layer base {
@@ -169,6 +169,33 @@ body {
 
 .animate-scroll-right {
   animation: scroll-right 30s linear infinite;
+}
+
+.animate-scroll-left {
+  animation: scroll-left 20s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.pause-on-hover:hover .animate-scroll-left,
+.pause-on-hover:hover .animate-scroll-right {
+  animation-play-state: paused;
 }
 
 .animate-fade-in-up {

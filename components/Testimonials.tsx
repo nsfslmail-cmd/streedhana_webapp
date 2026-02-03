@@ -36,7 +36,6 @@ const testimonials = [
 ];
 
 const Testimonials = () => {
-  const [isPaused, setIsPaused] = useState(false);
 
   return (
     <section className="py-20 bg-card overflow-hidden">
@@ -53,11 +52,9 @@ const Testimonials = () => {
 
       {/* Scrolling testimonials */}
       <div 
-        className="relative"
-        onMouseEnter={() => setIsPaused(true)}
-        onMouseLeave={() => setIsPaused(false)}
+        className="relative pause-on-hover"
       >
-        <div className={`flex gap-6 ${isPaused ? '' : 'animate-scroll-left'}`}>
+        <div className={`flex gap-6 animate-scroll-left`}>
           {/* Double the testimonials for seamless loop */}
           {[...testimonials, ...testimonials].map((testimonial, index) => (
             <div
