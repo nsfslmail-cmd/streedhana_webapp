@@ -30,7 +30,7 @@ const MutualFundSakhiGinnie = () => {
       <section className="pt-28 pb-12 md:pt-36 md:pb-16 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground mb-6">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mb-6">
               Mutual Fund <span className="text-primary">Sakhi</span> / <span className="text-accent">Ginnie</span>
             </h1>
             <p className="text-xl md:text-2xl text-primary font-medium italic">
@@ -41,8 +41,8 @@ const MutualFundSakhiGinnie = () => {
       </section>
 
       {/* Two Card Layout */}
-      <section className="py-12 md:py-16">
-        <div className="container mx-auto px-4">
+      <section className="py-6 md:py-8">
+        <div className="container mx-auto px-24">
           <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
             {/* Sakhi Card */}
             <Card className="border-primary/30 bg-gradient-to-br from-primary/5 to-background hover:shadow-xl transition-all duration-300">

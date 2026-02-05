@@ -190,7 +190,6 @@ const Products = () => {
                       </h3>
                       <div className="flex items-center justify-between">
                         <div>
-                          <p className="text-xs text-muted-foreground">CAGR</p>
                           <p className="text-xl font-bold text-accent">{portfolio.cagr}</p>
                         </div>
                         {/* <Button size="sm" variant="ghost" className="group-hover:bg-primary group-hover:text-primary-foreground">
