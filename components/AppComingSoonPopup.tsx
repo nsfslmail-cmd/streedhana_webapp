@@ -1,7 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Apple, Smartphone, User, X } from "lucide-react";
+import { X } from "lucide-react";
+import { DiAndroid } from "react-icons/di";
+import { FaApple } from "react-icons/fa";
+
 
 export default function AppComingSoonPopup() {
   const [open, setOpen] = useState(false);
@@ -9,7 +12,7 @@ export default function AppComingSoonPopup() {
   useEffect(() => {
     const interval = setInterval(() => {
       setOpen(true);
-    }, 30000); 
+    }, 60000); 
 
     return () => clearInterval(interval);
   }, []);
@@ -43,16 +46,14 @@ export default function AppComingSoonPopup() {
             href="#"
             className="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white px-4 py-3 rounded-lg font-medium transition"
           >
-            <User size={18} />
-            Android
+            <DiAndroid size={20} />
           </a>
 
           <a
             href="#"
             className="flex items-center justify-center gap-2 bg-black hover:bg-gray-900 text-white px-4 py-3 rounded-lg font-medium transition"
           >
-            <Apple size={18} />
-             iOS
+            <FaApple size={20} />
           </a>
         </div>
       </div>

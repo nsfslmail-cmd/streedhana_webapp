@@ -1,14 +1,16 @@
 import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { FileText, ShieldCheck } from "lucide-react";
 import Image from "next/image";
 
 const Footer = () => {
   return (
     <footer id="about" className="bg-navy text-white">
       <div className="container mx-auto px-4 py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
-          <div className="lg:col-span-2 ">
+          <div className="">
             {/* <h3 className="text-3xl font-display font-bold text-white mb-4">
               StreeDhana
             </h3>
@@ -53,6 +55,27 @@ const Footer = () => {
               <Button variant="outline" className="bg-transparent border-white/30 text-white hover:bg-white hover:text-navy">
                 iOS App
               </Button>
+            </div>
+          </div>
+
+          <div>
+            <h4 className="text-lg font-semibold mb-6">Links</h4>
+            <div className="space-y-4">
+              <Link
+                href="/privacy-policy"
+                className="flex items-center gap-3 text-white/70 hover:text-white transition-colors"
+              >
+                <ShieldCheck className="w-5 h-5" />
+                Privacy Policy
+              </Link>
+          
+              <Link
+                href="/terms&conditions"
+                className="flex items-center gap-3 text-white/70 hover:text-white transition-colors"
+              >
+                <FileText className="w-5 h-5" />
+                Terms & Conditions
+              </Link>
             </div>
           </div>
 

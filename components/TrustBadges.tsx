@@ -13,11 +13,11 @@ const badges = [
 const logos = [
   { src: "/axismflogo.png", alt: "AXIS Mutual Fund" },
   { src: "/sbimflogo.jpg", alt: "SBI Mutual Fund" },
-  { src: "/nipponmf.png", alt: "NIPPON India Mutual Fund" },
+  { src: "/nipponindia.png", alt: "NIPPON India Mutual Fund" },
   { src: "/tatamf.png", alt: "TATA Mutual Fund" },
   { src: "/dspmf.jpeg", alt: "DSP Mutual Fund" },
   { src: "/kotakmf.png", alt: "KOTAK Mutual Fund" },
-  { src: "/licmf.png", alt: "LIC Mutual Fund" },
+  { src: "/lic-mf.jpeg", alt: "LIC Mutual Fund" },
   { src: "/motilaloswalmf.jpeg", alt: "Motilal Oswal Mutual Fund" },
   { src: "/mahindramf.jpeg", alt: "Mahindra Manulife Mutual Fund" },
 ];
@@ -27,8 +27,8 @@ const TrustBadges = () => {
   return (
     <section className="py-8 bg-primary overflow-hidden">
       {/* Left to Right */}
-      <div className="mb-4 relative">
-        <div className="flex gap-12 animate-scroll-left">
+      <div className="mb-8 relative">
+        <div className="flex gap-12 animate-scroll-right">
           {[...badges, ...badges, ...badges].map((badge, index) => (
             <div
               key={`ltr-${index}`}
@@ -42,8 +42,8 @@ const TrustBadges = () => {
       </div>
 
       {/* Right to Left */}
-      <div className="relative">
-        <div className="flex items-center gap-10 animate-scroll-right">
+      <div className="mt-4 relative">
+        <div className="flex items-center gap-10 animate-scroll-left">
           {[...logos, ...logos, ...logos].map((logo, index) => (
             <div
               key={`logo-${index}`}
