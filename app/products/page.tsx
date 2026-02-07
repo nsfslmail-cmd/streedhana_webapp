@@ -145,7 +145,7 @@ const Products = () => {
                 data-[state=active]:bg-white
                 data-[state=active]:text-foreground
                 data-[state=active]:shadow-sm
-                rounded-md">
+                rounded-md cursor-pointer">
                 <Wallet className="w-4 h-4 mr-2" />
                 MF Portfolios
               </TabsTrigger>
@@ -153,7 +153,7 @@ const Products = () => {
                 data-[state=active]:bg-white
                 data-[state=active]:text-foreground
                 data-[state=active]:shadow-sm
-                rounded-md">
+                rounded-md cursor-pointer">
                 <TrendingUp className="w-4 h-4 mr-2" />
                 Goal Based
               </TabsTrigger>
@@ -190,7 +190,7 @@ const Products = () => {
                       </h3>
                       <div className="flex items-center justify-between">
                         <div>
-                          <p className="text-xl font-bold text-accent">{portfolio.cagr}</p>
+                          {/* <p className="text-xl font-bold text-accent">{portfolio.cagr}</p> */}
                         </div>
                         {/* <Button size="sm" variant="ghost" className="group-hover:bg-primary group-hover:text-primary-foreground">
                           Invest <ArrowRight className="w-4 h-4 ml-1" />

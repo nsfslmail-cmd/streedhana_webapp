@@ -48,6 +48,12 @@ const testimonials = [
     text: "Finally a platform that understands Indian women! The financial planning tools are exactly what I needed. My goal of saving for my daughter's education is now on track. Thank you StreeDhana!",
     rating: 5,
   },
+  {
+    name: "Sandhya Kohli",
+    avatar: "SV",
+    text: "Investment apps in the western world are great for your goals like buying jewellery, home appliances, travel trips. All in all I found this app great because it lets you save and earn both at the same time. Regarding the customer support experience, team was easy to reach, and quick to guide and respond to my issue! I highly recommend try this app once!!",
+    rating: 5,
+  }
 ];
 
 const Testimonials = () => {
@@ -65,11 +71,11 @@ const Testimonials = () => {
           </p>
         </div>
       
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="hidden md:grid grid-cols-1 lg:grid-cols-3 gap-6">
           {columns.map((column, colIndex) => (
             <div
               key={colIndex}
-              className="relative h-[400px] overflow-hidden"
+              className="relative h-150 overflow-hidden"
             >
               <div
                 className={`
@@ -120,6 +126,57 @@ const Testimonials = () => {
             </div>
           ))}
         </div>
+        {/* Mobile horizontal rows */}
+        <div className="md:hidden space-y-6 overflow-hidden">
+          {splitIntoColumns(testimonials, 3).map((row, rowIndex) => (
+            <div key={rowIndex} className="relative overflow-hidden">
+              <div
+                className={`
+                  flex gap-4 w-max
+                  pause-on-hover
+                  ${
+                    rowIndex % 2 === 0
+                      ? "animate-scroll-left"
+                      : "animate-scroll-right"
+                  }
+                `}
+              >
+                {[...row, ...row].map((testimonial, i) => (
+                  <div
+                    key={`${testimonial.name}-mobile-${i}`}
+                    className="w-[350px] bg-background border border-border rounded-2xl p-4 shadow-sm"
+                  >
+                    {/* Stars */}
+                    <div className="flex gap-1 mb-4">
+                      {[...Array(testimonial.rating)].map((_, j) => (
+                        <Star
+                          key={j}
+                          className="w-4 h-4 fill-accent text-accent"
+                        />
+                      ))}
+                    </div>
+
+                    <p className="text-muted-foreground mb-6 leading-relaxed">
+                      “{testimonial.text}”
+                    </p>
+
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                        <span className="text-sm font-semibold text-primary">
+                          {testimonial.avatar}
+                        </span>
+                      </div>
+                      <span className="font-semibold text-foreground">
+                        {testimonial.name}
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+
       </div>
     </section>
   );

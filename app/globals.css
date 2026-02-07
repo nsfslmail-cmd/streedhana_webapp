@@ -154,7 +154,7 @@
   animation: scroll-left 20s linear infinite;
 }
 
-@keyframes scroll-left {
+/* @keyframes scroll-left {
   0% {
     transform: translateX(0);
   }
@@ -172,9 +172,9 @@
   100% {
     transform: translateX(0);
   }
-}
+} */
 
-@keyframes scroll-up {
+/* @keyframes scroll-up {
   from {
     transform: translateY(0);
   }
@@ -190,7 +190,40 @@
   to {
     transform: translateY(0);
   }
+} */
+
+@layer utilities {
+  @keyframes scroll-up {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-50%);
+    }
+  }
+
+  @keyframes scroll-down {
+    0% {
+      transform: translateY(-50%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  .animate-scroll-up {
+    animation: scroll-up 30s linear infinite;
+  }
+
+  .animate-scroll-down {
+    animation: scroll-down 30s linear infinite;
+  }
+
+  .pause-on-hover:hover {
+    animation-play-state: paused;
+  }
 }
+
 
 .animate-scroll-up {
   animation: scroll-up 40s linear infinite;
@@ -203,6 +236,35 @@
 .pause-on-hover:hover {
   animation-play-state: paused;
 }
+
+@layer utilities {
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes scroll-right {
+    0% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  .animate-scroll-left {
+    animation: scroll-left 40s linear infinite;
+  }
+
+  .animate-scroll-right {
+    animation: scroll-right 40s linear infinite;
+  }
+}
+
 
 @layer utilities {
   .shadow-soft {

@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin, Link2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { FileText, ShieldCheck } from "lucide-react";
@@ -79,8 +79,9 @@ const Footer = () => {
               </Link>
               <Link
                 href="/sitemap.xml"
-                className="text-muted-foreground hover:text-primary transition"
+                className="flex items-center gap-3 text-white/70 hover:text-white transition-colors"
               >
+                <Link2 className="w-5 h-5" />
                 Sitemap
               </Link>
             </div>

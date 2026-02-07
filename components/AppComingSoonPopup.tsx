@@ -12,10 +12,11 @@ export default function AppComingSoonPopup() {
   useEffect(() => {
     const interval = setInterval(() => {
       setOpen(true);
-    }, 120000); 
+    }, 300000); // 5 minutes
 
     return () => clearInterval(interval);
   }, []);
+
 
   if (!open) return null;
 
@@ -26,7 +27,7 @@ export default function AppComingSoonPopup() {
         {/* Close Icon */}
         <button
           onClick={() => setOpen(false)}
-          className="absolute top-3 right-3 text-gray-500 hover:text-gray-800"
+          className="absolute top-3 right-3 text-gray-500 hover:text-gray-800 cursor-pointer"
           aria-label="Close"
         >
           <X size={20} />
