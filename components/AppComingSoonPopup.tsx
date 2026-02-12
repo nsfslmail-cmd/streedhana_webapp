@@ -2,62 +2,109 @@
 
 import { useEffect, useState } from "react";
 import { X } from "lucide-react";
-import { DiAndroid } from "react-icons/di";
-import { FaApple } from "react-icons/fa";
 
-
-export default function AppComingSoonPopup() {
+export default function AppDownloadPopup() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setOpen(true);
-    }, 300000); // 5 minutes
-
-    return () => clearInterval(interval);
+    const timer = setTimeout(() => setOpen(true), 3000); 
+    return () => clearTimeout(timer);
   }, []);
-
 
   if (!open) return null;
 
   return (
-    <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/60 px-4">
-      <div className="relative bg-white rounded-xl p-6 max-w-md w-full text-center shadow-xl">
-        
-        {/* Close Icon */}
+    <div className="fixed inset-0 z-[9999] bg-black/60 flex items-center justify-center p-4">
+      <div className="relative bg-gradient-to-r from-rose-50 to-white rounded-2xl shadow-2xl max-w-3xl w-full overflow-hidden">
+
         <button
           onClick={() => setOpen(false)}
-          className="absolute top-3 right-3 text-gray-500 hover:text-gray-800 cursor-pointer"
-          aria-label="Close"
+          className="absolute top-4 right-4 bg-white/80 hover:bg-white rounded-full p-2 shadow cursor-pointer"
         >
-          <X size={20} />
+          <X size={18} />
         </button>
 
-        <h2 className="text-2xl font-bold mb-2">
-          📱 Download StreeDhana App
-        </h2>
+        <div className="grid md:grid-cols-2 gap-6 items-center p-6 md:p-8">
+          <div>
+  
+            <h2 className="text-3xl md:text-4xl font-bold text-rose-700 mb-4">
+              Download our App!
+            </h2>
 
-        <p className="text-gray-600 mb-6">
-          Available on Android & iOS.
-        </p>
+            <div>
+              <img 
+               src="/download-left.png"
+               alt="Download"
+              className="h-20 w-auto object-contain"
+              />
+            </div>
+        
+            <div className="flex items-center">
+              <img 
+                src="/finallogo.png"  
+                alt="StreeDhana Logo"
+                className="h-20 w-auto object-contain"
+              />
+            </div>
+        
+            <p className="text-destructive font-bold mb-6">
+              Stop Overthinking, Start Investing.
+            </p>
+        
+            <div className="flex flex-col sm:flex-row gap-3">
+              <a
+                href="#"
+                className="flex items-center gap-3 bg-black text-white px-5 py-3 rounded-xl hover:scale-105 transition duration-300 min-w-[170px]"
+              >
+                <img
+                  src="/google-play.png"
+                  alt="Google Play"
+                  className="h-10 w-8 object-contain"
+                />
+                <div className="leading-tight">
+                  <p className="text-[10px] tracking-wide uppercase">
+                    Get it on
+                  </p>
+                  <p className="text-sm font-semibold">
+                    Google Play
+                  </p>
+                </div>
+              </a>
+            
+              <a
+                href="#"
+                className="flex items-center gap-3 bg-black text-white px-5 py-3 rounded-xl hover:scale-105 transition duration-300 min-w-[170px]"
+              >
+                <img
+                  src="/appstore.png"
+                  alt="App Store"
+                  className="h-10 w-8 object-contain"
+                />
+                <div className="leading-tight">
+                  <p className="text-[10px] tracking-wide">
+                    Download on the
+                  </p>
+                  <p className="text-sm font-semibold">
+                    App Store
+                  </p>
+                </div>
+              </a>
+            
+            </div>
+          </div>
+  
+          <div className="relative flex justify-center items-center">
+            <div className="absolute w-72 h-72 bg-yellow-200 rounded-full blur-3xl opacity-40"></div>
+            
+              <img
+                src="/girl-1.png"
+                alt="App Preview"
+                className="relative max-h-[320px] md:max-h-[380px] w-auto object-contain"
+              />
+            </div>
+          </div>
 
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="#"
-            className="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white px-4 py-3 rounded-lg font-medium transition"
-          >
-            <DiAndroid size={20} />
-          </a>
-
-          <a
-            href="#"
-            className="flex items-center justify-center gap-2 bg-black hover:bg-gray-900 text-white px-4 py-3 rounded-lg font-medium transition"
-          >
-            <FaApple size={20} />
-          </a>
-        </div>
-      </div>
+       </div>
     </div>
   );
 }
