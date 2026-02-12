@@ -7,10 +7,17 @@ export default function AppDownloadPopup() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setOpen(true), 3000); 
-    return () => clearTimeout(timer);
+    const hasShown = localStorage.getItem("appPopupShown");
+    if (!hasShown) {
+      setOpen(true);
+    }
   }, []);
-
+  
+  const handleClose = () => {
+    setOpen(false);
+    localStorage.setItem("appPopupShown", "true");
+  };
+  
   if (!open) return null;
 
   return (

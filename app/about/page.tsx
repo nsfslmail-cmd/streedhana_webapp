@@ -218,10 +218,9 @@ export default function AboutPage(): JSX.Element {
         <Card className="rounded-2xl bg-card shadow-large">
           <CardContent className="p-8 space-y-4">
             <div className="grid md:grid-cols-3 gap-10 items-start">
-              {/* Image */}
               <div className="relative w-full h-92 rounded-2xl overflow-hidden bg-gray-200">
                 <Image
-                  src="/founder.png"
+                  src="/founder.jpg"
                   alt="Founder"
                   fill
                   className="object-contain"
@@ -280,7 +279,7 @@ export default function AboutPage(): JSX.Element {
             <div className="grid md:grid-cols-3 gap-10 items-start">
               <div className="relative w-full h-96 rounded-2xl overflow-hidden bg-gray-200">
                 <Image
-                  src="/founder.png"
+                  src=""
                   alt="Founder"
                   fill
                   className="object-contain"
