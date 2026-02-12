@@ -278,12 +278,12 @@ export default function AboutPage(): JSX.Element {
           <CardContent className="p-8 space-y-4">
             <div className="grid md:grid-cols-3 gap-10 items-start">
               <div className="relative w-full h-96 rounded-2xl overflow-hidden bg-gray-200">
-                <Image
+                {/* <Image
                   src=""
                   alt="Founder"
                   fill
                   className="object-contain"
-                />
+                /> */}
               </div>
       
               <div className="md:col-span-2 space-y-4">

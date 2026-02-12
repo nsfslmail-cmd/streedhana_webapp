@@ -35,7 +35,7 @@ const TrustBadges = () => {
       <div className="pointer-events-none absolute right-0 top-0 h-full w-10 md:w-52 bg-gradient-to-l from-primary to-transparent z-10" />
 
       {/* Badges */}
-      <div className="overflow-hidden">
+      <div className="overflow-hidden max-w-[1220px] mx-auto">
         <div className="flex w-max animate-scroll-right">
           {[...badges, ...badges].map((badge, index) => (
             <div
@@ -52,7 +52,7 @@ const TrustBadges = () => {
       </div>
 
       {/* Logos */}
-      <div className="overflow-hidden mt-6">
+      <div className="overflow-hidden mt-6 max-w-[1220px] mx-auto">
         <div className="flex w-max animate-scroll-left">
           {[...logos, ...logos].map((logo, index) => (
             <div
