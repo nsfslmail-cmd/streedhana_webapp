@@ -22,7 +22,7 @@ export default function AppDownloadPopup() {
 
   return (
     <div className="fixed inset-0 z-[9999] bg-black/60 flex items-center justify-center p-4">
-      <div className="relative bg-gradient-to-r from-rose-50 to-white rounded-2xl shadow-2xl max-w-3xl w-full overflow-hidden max-h-[80vh]">
+      <div className="relative bg-gradient-to-r from-rose-50 to-white rounded-2xl shadow-2xl max-w-3xl w-full overflow-hidden max-h-[90vh]">
 
         <button
           onClick={() => setOpen(false)}
@@ -65,10 +65,10 @@ export default function AppDownloadPopup() {
               Stop Overthinking, Start Investing.
             </p>
         
-            <div className="flex flex-col sm:flex-row gap-3">
+            <div className="flex flex-row gap-3">
               <a
                 href="#"
-                className="flex items-center gap-3 bg-black text-white px-5 py-3 rounded-xl hover:scale-105 transition duration-300 min-w-[170px] max-w-[200px]"
+                className="flex items-center gap-3 bg-black text-white px-2 md:px-5 py-3 rounded-xl hover:scale-105 transition duration-300 min-w-[120px] max-w-[200px]"
               >
                 <img
                   src="/google-play.png"
@@ -87,7 +87,7 @@ export default function AppDownloadPopup() {
             
               <a
                 href="#"
-                className="flex items-center gap-3 bg-black text-white px-5 py-3 rounded-xl hover:scale-105 transition duration-300 min-w-[170px] max-w-[200px]"
+                className="flex items-center gap-3 bg-black text-white px-2 md:px-5 py-3 rounded-xl hover:scale-105 transition duration-300 min-w-[120px] max-w-[200px]"
               >
                 <img
                   src="/appstore.png"
