@@ -12,7 +12,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
-          <div className="">
+          <div className="bg-white p-2 rounded -lg">
             {/* <h3 className="text-3xl font-display font-bold text-white mb-4">
               StreeDhana
             </h3>
@@ -21,11 +21,12 @@ const Footer = () => {
             </p> */}
             <a href="/" className="flex items-center mb-10">
               <Image
-                src="/logo-1.png"      
+                src="/streedhana-logo.png"
                 alt="StreeDhana Logo"
-                width={200}
-                height={180}
-                className="rounded-lg"
+                width={160}
+                height={130}
+                className="object-contain"
+                priority
               />
             </a>
             
