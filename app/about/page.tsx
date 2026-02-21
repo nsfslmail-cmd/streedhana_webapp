@@ -382,7 +382,7 @@ export default function AboutPage(): JSX.Element {
             </div>
         
             <div className="relative rounded-3xl overflow-hidden shadow-soft ">
-              <Image src="/team-cul-1.png" alt="Team culture" fill className="object-cover" />
+              <Image src="/team-2.png" alt="Team culture" fill className="object-cover" />
             </div>
           
             <div className="relative md:row-span-2 rounded-3xl overflow-hidden shadow-soft">

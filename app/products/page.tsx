@@ -1,8 +1,9 @@
-
+"use client";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import Link from "next/link";
 import { 
   Wallet, 
   GraduationCap, 
@@ -18,6 +19,7 @@ import {
   ArrowRight,
   Lock
 } from "lucide-react";
+import { useState } from "react";
 
 const mutualFundPortfolios = [
   { name: "Emergency Fund", cagr: "6.44%", duration: "short-term" },
@@ -97,6 +99,8 @@ const productCategories = [
 ];
 
 const Products = () => {
+  const [activeTab, setActiveTab] = useState("portfolios");
+
   return (
     <div className="min-h-screen bg-background">
       
@@ -139,62 +143,62 @@ const Products = () => {
       {/* Main Content with Tabs */}
       <section className="py-12 md:py-16">
         <div className="container mx-auto px-4 text-center">
-          <Tabs defaultValue="portfolios" className="w-full">
-            <TabsList className="inline-flex rounded-full p-1 mx-auto mb-10">
-          
-              <TabsTrigger
-                value="portfolios"
-                className="
-                  px-6 py-2 
-                  rounded-full 
-                  text-sm md:text-base 
-                  font-medium 
-                  transition-all
-                  data-[state=active]:bg-primary
-                  data-[state=active]:text-white
-                  data-[state=active]:shadow
-                  text-muted-foreground
-                "
+          {/* Toggle */}
+          <div className="flex justify-center mb-8">
+            <div className="inline-flex rounded-full bg-muted p-1">
+
+              <button
+                onClick={() => setActiveTab("portfolios")}
+                className={`px-6 py-2 rounded-full text-sm md:text-base font-medium transition flex items-center
+                  ${
+                    activeTab === "portfolios"
+                      ? "bg-primary text-white shadow"
+                      : "text-muted-foreground"
+                  }`}
               >
                 <Wallet className="w-4 h-4 mr-2" />
                 MF Portfolios
-              </TabsTrigger>
-          
-              <TabsTrigger
-                value="goals"
-                className="
-                  px-6 py-2 
-                  rounded-full 
-                  text-sm md:text-base 
-                  font-medium 
-                  transition-all
-                  data-[state=active]:bg-primary
-                  data-[state=active]:text-white
-                  data-[state=active]:shadow
-                  text-muted-foreground
-                "
+              </button>
+
+              <button
+                onClick={() => setActiveTab("goals")}
+                className={`px-6 py-2 rounded-full text-sm md:text-base font-medium transition flex items-center
+                  ${
+                    activeTab === "goals"
+                      ? "bg-primary text-white shadow"
+                      : "text-muted-foreground"
+                  }`}
               >
                 <TrendingUp className="w-4 h-4 mr-2" />
                 Goal Based
-              </TabsTrigger>
-          
-            </TabsList>
-          
-            {/* Mutual Fund Portfolios Tab */}
-            <TabsContent value="portfolios" className="space-y-8">
+              </button>
+
+            </div>
+          </div>
+
+
+          {/* Mutual Fund Portfolios Content */}
+          {activeTab === "portfolios" && (
+            <div className="space-y-8">
               <div className="text-center mb-8">
                 <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-3">
                   Mutual Fund Portfolios
                 </h2>
                 <p className="text-muted-foreground max-w-2xl mx-auto">
-                  Pre-defined investment funds with proven track records. Click to start investing.
+                  Pre-defined investment funds with proven track records.{" "}
+                  <Link
+                    href="/terms-and-conditions"
+                    className="cursor-pointer font-semibold"
+                  >
+                    Click to start investing.
+                  </Link>
                 </p>
               </div>
-              
+
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                 {mutualFundPortfolios.map((portfolio) => (
-                  <Card 
-                    key={portfolio.name} 
+                  <Card
+                    key={portfolio.name}
                     className="group hover:shadow-lg hover:border-primary/30 transition-all duration-300 cursor-pointer"
                   >
                     <CardContent className="p-5 md:p-6">
@@ -206,25 +210,21 @@ const Products = () => {
                           {portfolio.duration}
                         </Badge>
                       </div>
+
                       <h3 className="font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
                         {portfolio.name}
                       </h3>
-                      <div className="flex items-center justify-between">
-                        <div>
-                          {/* <p className="text-xl font-bold text-accent">{portfolio.cagr}</p> */}
-                        </div>
-                        {/* <Button size="sm" variant="ghost" className="group-hover:bg-primary group-hover:text-primary-foreground">
-                          Invest <ArrowRight className="w-4 h-4 ml-1" />
-                        </Button> */}
-                      </div>
                     </CardContent>
                   </Card>
                 ))}
               </div>
-            </TabsContent>
+            </div>
+          )}
 
-            {/* Goal Based Investing Tab */}
-            <TabsContent value="goals" className="space-y-8">
+
+          {/* Goal Based Content */}
+          {activeTab === "goals" && (
+            <div className="space-y-8">
               <div className="text-center mb-8">
                 <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-3">
                   Goal Based Mutual Fund Investment
@@ -233,47 +233,57 @@ const Products = () => {
                   Plan, Save & Invest for Every Life Goal
                 </p>
                 <p className="text-muted-foreground max-w-2xl mx-auto">
-                  With goal-based investing, you can set clear goals, invest regularly, and withdraw easily when needed—all with confidence and control.
+                  With goal-based investing, you can set clear goals, invest regularly,
+                  and withdraw easily when needed—all with confidence and control.
                 </p>
               </div>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                 {goalBasedPlans.map((plan) => {
                   const IconComponent = plan.icon;
                   return (
-                    <Card 
+                    <Card
                       key={plan.name}
                       className={`group hover:shadow-lg transition-all duration-300 cursor-pointer ${
-                        plan.recommended ? "border-primary bg-primary/5 ring-1 ring-primary/20" : "hover:border-primary/30"
+                        plan.recommended
+                          ? "border-primary bg-primary/5 ring-1 ring-primary/20"
+                          : "hover:border-primary/30"
                       }`}
                     >
                       <CardContent className="p-5 md:p-6">
                         <div className="flex items-start gap-4">
-                          <div className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 ${
-                            plan.recommended ? "bg-primary text-primary-foreground" : "bg-primary text-primary-foreground"
-                          }`}>
+                          <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-primary text-primary-foreground">
                             <IconComponent className="w-6 h-6" />
                           </div>
+
                           <div className="flex-1">
                             <div className="flex items-center gap-2 mb-2">
                               <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors">
                                 {plan.name}
                               </h3>
+
                               {plan.recommended && (
                                 <Badge className="bg-accent text-accent-foreground text-xs">
                                   Recommended
                                 </Badge>
                               )}
                             </div>
+
                             <p className="text-sm text-muted-foreground mb-4">
                               {plan.description}
                             </p>
-                            <Button 
-                              size="sm" 
+
+                            <Button
+                              size="sm"
                               variant={plan.recommended ? "default" : "outline"}
-                              className={plan.recommended ? "" : "border-primary text-primary hover:bg-primary hover:text-primary-foreground"} 
+                              className={
+                                plan.recommended
+                                  ? ""
+                                  : "border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                              }
                             >
-                              Start Planning <ArrowRight className="w-4 h-4 ml-1" />
+                              Start Planning
+                              <ArrowRight className="w-4 h-4 ml-1" />
                             </Button>
                           </div>
                         </div>
@@ -282,8 +292,8 @@ const Products = () => {
                   );
                 })}
               </div>
-            </TabsContent>
-          </Tabs>
+            </div>
+          )}
         </div>
       </section>
 
