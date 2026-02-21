@@ -126,7 +126,7 @@ const Footer = () => {
 
           {/* Address */}
           <div>
-            <h4 className="text-lg font-semibold mb-6">Our Office</h4>
+            <h4 className="text-lg font-semibold mb-6 ml-7">Our Office</h4>
             <div className="flex items-start gap-3 text-white/70">
               <MapPin className="w-5 h-5 mt-1 shrink-0" />
               <div>
@@ -137,7 +137,7 @@ const Footer = () => {
                 <p>Uttar Pradesh 226010</p>
               </div>
             </div>
-            <div className="mt-4 text-sm text-white/50">
+            <div className="mt-4 text-sm text-white/50 ml-7">
               <p>AMFI Registration Number: ARN-348335</p>
               <p>Validity: 18-DEC-2025 To 17-DEC-2028</p>
             </div>
