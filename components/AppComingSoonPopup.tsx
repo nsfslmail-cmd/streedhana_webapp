@@ -34,7 +34,7 @@ export default function AppDownloadPopup() {
         <div className="grid md:grid-cols-2 gap-6 items-center p-6 md:p-8">
           <div>
   
-            <h2 className="text-3xl md:text-4xl font-bold text-rose-700 mb-4">
+            <h2 className="text-2xl md:text-4xl font-bold text-rose-700 mb-4">
               Download our App!
             </h2>
 
@@ -65,10 +65,10 @@ export default function AppDownloadPopup() {
               Stop Overthinking, Start Investing.
             </p>
         
-            <div className="flex flex-row gap-3">
+            <div className="flex flex-col items-center justify-center gap-3 md:flex-row md:justify-center w-full">
               <a
                 href="#"
-                className="flex items-center gap-3 bg-black text-white px-2 md:px-5 py-3 rounded-xl hover:scale-105 transition duration-300 min-w-[120px] max-w-[200px]"
+                className="flex items-center justify-center gap-3 bg-black text-white px-4 md:px-5 py-3 rounded-xl hover:scale-105 transition duration-300 w-[200px]"
               >
                 <img
                   src="/google-play.png"
@@ -76,18 +76,18 @@ export default function AppDownloadPopup() {
                   className="h-10 w-8 object-contain"
                 />
                 <div className="leading-tight">
-                  <p className="text-[10px] tracking-wide uppercase">
+                  <p className="text-[8px] tracking-wide uppercase">
                     Get it on
                   </p>
-                  <p className="text-sm font-semibold">
+                  <p className="text-[12px] font-semibold">
                     Google Play
                   </p>
                 </div>
               </a>
-            
+
               <a
                 href="#"
-                className="flex items-center gap-3 bg-black text-white px-2 md:px-5 py-3 rounded-xl hover:scale-105 transition duration-300 min-w-[120px] max-w-[200px]"
+                className="flex items-center justify-center gap-3 bg-black text-white px-4 md:px-5 py-3 rounded-xl hover:scale-105 transition duration-300 w-[200px]"
               >
                 <img
                   src="/appstore.png"
@@ -95,15 +95,14 @@ export default function AppDownloadPopup() {
                   className="h-10 w-8 object-contain"
                 />
                 <div className="leading-tight">
-                  <p className="text-[10px] tracking-wide">
+                  <p className="text-[8px] tracking-wide">
                     Download on the
                   </p>
-                  <p className="text-sm font-semibold">
+                  <p className="text-[12px] font-semibold">
                     App Store
                   </p>
                 </div>
               </a>
-            
             </div>
           </div>
   
