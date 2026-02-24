@@ -147,11 +147,11 @@ const Footer = () => {
 
         {/* Disclaimer */}
         <div className="mt-12 pt-8 border-t border-white/10">
-          <p className="text-xs text-white/50 leading-relaxed">
+          <div className="text-xs text-white/50 leading-relaxed">
             <strong>Disclaimer:</strong> Mutual fund investments are subject to market risks, read all scheme related documents carefully before investing. Investment in securities market are subject to market risks, read all the related documents carefully before investing. StreeDhana is owned and operated by NextStep Financials Service Private Limited, providing Mutual Fund investing and Financial Literacy with AMFI certification.
             <p>Logos and trademarks displayed are the property of their respective mutual fund companies and are used solely for informational and representation purposes. Their use does not imply any partnership, endorsement, or affiliation unless explicitly stated.</p>
             <p>StreeDhana is owned by NextStep Financials Service Pvt. Ltd., a registered mutual fund distributor with a valid ARN.</p>
-          </p>
+          </div>
         </div>
 
         {/* Copyright */}
