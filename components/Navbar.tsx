@@ -265,15 +265,17 @@ const Navbar = () => {
               {/* Mobile Buttons */}
               <div className="flex flex-col gap-3 pt-6 border-t border-gray-100">
                 <Button 
+                  onClick={()=>{window.location.href="https://next.streedhana.com/Login"}}
                   variant="outline" 
                   className="w-full border-primary text-primary hover:bg-primary hover:text-white transition-all duration-200"
-                  onClick={() => setIsOpen(false)}
+                  // onClick={() => setIsOpen(false)}
                 >
                   Distributor Login
                 </Button>
                 <Button 
+                  onClick={()=>{window.location.href="https://next.streedhana.com"}}
                   className="w-full bg-primary text-white hover:bg-primary/90 transition-all duration-200 shadow-md"
-                  onClick={() => setIsOpen(false)}
+                  // onClick={() => setIsOpen(false)}
                 >
                   Customer Login
                 </Button>
