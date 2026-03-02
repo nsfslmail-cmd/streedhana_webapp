@@ -275,11 +275,12 @@ const Products = () => {
 
                             <Button
                               size="sm"
+                              onClick={()=>{window.location.href="https://next.streedhana.com"}}
                               variant={plan.recommended ? "default" : "outline"}
                               className={
                                 plan.recommended
-                                  ? ""
-                                  : "border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                                  ? "cursor-pointer"
+                                  : "border-primary text-primary hover:bg-primary hover:text-primary-foreground cursor-pointer"
                               }
                             >
                               Start Planning
@@ -306,7 +307,7 @@ const Products = () => {
           <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
             Use our AI-powered portfolio analyzer to get personalized recommendations based on your goals and risk profile.
           </p>
-          <Button variant='gredient' size="lg" className="">
+          <Button variant='gredient' size="lg" className="" onClick={()=>{window.location.href="https://next.streedhana.com"}}>
             Try Portfolio Analyzer
           </Button>
         </div>

@@ -32,28 +32,32 @@ const Footer = () => {
             
             <div className="flex gap-4 mb-8">
               <a
-                href="#"
+                href="https://www.facebook.com/share/18Kz4WCR2E/?mibextid=wwXIfr"
+                target="_blank"
                 className="w-10 h-10 rounded-full bg-[#1877F2] flex items-center justify-center hover:scale-110 transition"
               >
                 <Facebook className="w-5 h-5 text-white" />
               </a>
             
               <a
-                href="#"
+                href="https://www.instagram.com/stree_dhana?igsh=Y2gzdzU4bWg3ejBv"
+                target="_blank"
                 className="w-10 h-10 rounded-full bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 flex items-center justify-center hover:scale-110 transition"
               >
                 <Instagram className="w-5 h-5 text-white" />
               </a>
             
               <a
-                href="#"
+                href="https://www.linkedin.com/company/streedhana/"
+                target="_blank"
                 className="w-10 h-10 rounded-full bg-[#0A66C2] flex items-center justify-center hover:scale-110 transition"
               >
                 <Linkedin className="w-5 h-5 text-white" />
               </a>
             
               <a
-                href="#"
+                href="https://whatsapp.com/channel/0029Vb6NBdbADTO5psP2Xh1n"
+                target="_blank"
                 className="w-10 h-10 rounded-full bg-[#25D366] flex items-center justify-center hover:scale-110 transition"
               >
                 <FaWhatsapp className="w-5 h-5 text-white" />
@@ -118,10 +122,10 @@ const Footer = () => {
                 <Mail className="w-5 h-5" />
                 contact@streedhana.com
               </a>
-              <a href="tel:1800180180" className="flex items-center gap-3 text-white/70 hover:text-white transition-colors">
+              {/* <a href="tel:1800180180" className="flex items-center gap-3 text-white/70 hover:text-white transition-colors">
                 <Phone className="w-5 h-5" />
                 Toll Free: 1800 180 180
-              </a>
+              </a> */}
             </div>
           </div>
 

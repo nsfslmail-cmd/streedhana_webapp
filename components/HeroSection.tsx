@@ -31,6 +31,7 @@ export default function HeroSection() {
             <div className="flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start mt-8 pt-4 md:pt-8">
               
               <Button
+                onClick={()=>{window.location.href="https://next.streedhana.com"}}
                 variant="gredient"
                 size="lg"
                 className="rounded-xl px-6 text-base font-semibold shadow-lg shadow-primary/25 w-full sm:w-auto"
@@ -39,6 +40,7 @@ export default function HeroSection() {
               </Button>
 
               <Button
+                onClick={()=>{window.location.href="https://next.streedhana.com"}}
                 variant="gredient"
                 size="lg"
                 className="rounded-xl px-6 text-base font-semibold shadow-lg shadow-primary/25 w-full sm:w-auto"
