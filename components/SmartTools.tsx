@@ -1,5 +1,6 @@
 import { Search, BarChart3, GitCompare, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const tools = [
   {
@@ -45,8 +46,9 @@ const SmartTools = () => {
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto cursor-pointer">
           {tools.map((tool, index) => (
-            <div
-              key={tool.title}
+            <Link
+              key={index}
+              href="https://next.streedhana.com"
               // className="group relative bg-card border border-border rounded-2xl p-8 hover:border-primary hover:shadow-glow transition-all duration-500"
               className="
   group relative
@@ -111,12 +113,12 @@ const SmartTools = () => {
 
               <Button 
                 variant="ghost" 
-                className="group/btn text-primary hover:text-primary hover:bg-coral-light p-0"
+                className="group/btn text-primary hover:text-primary hover:bg-coral-light p-0 cursor-pointer"
               >
                 Know More 
                 <ArrowRight className="ml-1 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
               </Button>
-            </div>
+            </Link>
           ))}
         </div>
 
