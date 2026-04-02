@@ -66,7 +66,8 @@ const Footer = () => {
             </div>
 
             <div className="flex gap-3">
-              <Button variant="outline" className="bg-black border-white/30 text-white hover:scale-105 hover:text-black">
+              <a href="https://play.google.com/store/apps/details?id=com.streedhana.ondcapp" className="cursor-pointer">
+              <Button variant="outline" className="bg-black border-white/30 text-white hover:scale-105 hover:text-black cursor-pointer">
                 <img
                   src="/google-play.png"
                   alt="Google Play"
@@ -74,7 +75,9 @@ const Footer = () => {
                 />
                 Android App
               </Button>
-              <Button variant="outline" className="bg-black border-white/30 text-white hover:scale-105 hover:text-black">
+              </a>
+              <a href="https://apps.apple.com/us/app/streedhana/id6760256879" className="cursor-pointer">
+              <Button variant="outline" className="bg-black border-white/30 text-white hover:scale-105 hover:text-black cursor-pointer">
                 <img
                   src="/appstore.png"
                   alt="App Store"
@@ -82,6 +85,7 @@ const Footer = () => {
                 />
                 iOS App
               </Button>
+              </a>
             </div>
           </div>
 

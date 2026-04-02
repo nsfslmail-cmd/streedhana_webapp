@@ -186,7 +186,7 @@ export default function AppDownloadPopup() {
         
             <div className="flex flex-col items-center justify-center gap-3 md:flex-row md:justify-center w-full">
               <a
-                href="#"
+                href="https://play.google.com/store/apps/details?id=com.streedhana.ondcapp"
                 className="flex items-center justify-center gap-3 bg-black text-white px-4 md:px-5 py-3 rounded-xl hover:scale-105 transition duration-300 w-[200px]"
               >
                 <img
@@ -205,7 +205,7 @@ export default function AppDownloadPopup() {
               </a>
 
               <a
-                href="#"
+                href="https://apps.apple.com/us/app/streedhana/id6760256879"
                 className="flex items-center justify-center gap-3 bg-black text-white px-4 md:px-5 py-3 rounded-xl hover:scale-105 transition duration-300 w-[200px]"
               >
                 <img
