@@ -16,6 +16,11 @@ const slides = [
   "/mf-ginnie.jpg",
   "/5k-sip.jpg",
   // "/banner5.png",
+  "/banner11.jpeg",
+  "/banner22.jpeg",
+  "/banner33.jpeg",
+  "/banner44.jpeg",
+  "/banner55.jpeg",
 ];
 
 export default function HeroSlider() {
