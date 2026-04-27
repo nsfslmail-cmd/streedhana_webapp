@@ -8,9 +8,10 @@ export default function PrivacyPolicyPage() {
         <p className="text-sm text-muted-foreground mb-8">
           Last updated: 26 Jan, 2026
         </p>
+        
 
         {/* 1. Introduction */}
-        <PolicySection title="1. Introduction">
+        <PolicySection title="1. Introduction">     
           <p>
             This Privacy Policy explains how <strong>StreeDhana</strong>, a
             financial literacy and investor awareness platform promoted by
@@ -233,6 +234,10 @@ export default function PrivacyPolicyPage() {
           <p>
             This Privacy Policy shall be governed by and construed in accordance with the laws of India, including the Digital Personal Data Protection Act, 2023.
           </p>
+
+          <p className="text-sm font-medium mb-6">
+          StreeDhana is Owned and Operated by NextStep Financials Service Private Limited.
+       </p>
         </PolicySection>
 
         {/* Disclaimer */}
